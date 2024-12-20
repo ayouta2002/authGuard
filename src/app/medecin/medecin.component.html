@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultations Médicales en Ligne</title>
+</head>
+<body>
+   <!-- Header -->
+  <header>
+    <div class="logo">TuniVert</div>
+    <nav>
+      <ul>
+        <li><a href="#about">Qui sommes-nous ?</a></li>
+        <li><a href="#program">Programme</a></li>
+        <li><a href="#team">Équipe</a></li>
+        <li><a [routerLink]="['/chatbot']">ChatBot</a></li>
+        <li><a [routerLink]="['/avis']">Avis</a></li>
+        <li><a [routerLink]="['/medecin']">Accès à la télémédecine</a></li>
+
+
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="cta">Rejoignez-nous</a>
+  </header>
+ 
+
+
+    <!-- Section des Médecins -->
+    <section id="medecins" class="medecins">
+        <h2>Liste des Médecins</h2>
+        <div class="medecins-container">
+            <div class="medecin-item">
+                <h3>Dr. Sarah Ben Ali</h3>
+                <p>Spécialité : Médecine Générale</p>
+                <p>Téléphone : 0123-456-789</p>
+                <p>Email : sarah.benaligmail.com</p>
+                <button onclick="openAppointmentForm('Dr. Sarah Ben Ali')">Prendre Rendez-vous</button>
+            </div>
+            <div class="medecin-item">
+                <h3>Dr. Ahmed Zouari</h3>
+                <p>Spécialité : Pédiatrie</p>
+                <p>Téléphone : 0123-456-790</p>
+                <p>Email : ahmed.zouariexample.com</p>
+                <button onclick="openAppointmentForm('Dr. Ahmed Zouari')">Prendre Rendez-vous</button>
+            </div>
+            <div class="medecin-item">
+                <h3>Dr. Leila Kaabi</h3>
+                <p>Spécialité : Dermatologie</p>
+                <p>Téléphone : 0123-456-791</p>
+                <p>Email : leila.kaabiexample.com</p>
+                <button onclick="openAppointmentForm('Dr. Leila Kaabi')">Prendre Rendez-vous</button>
+            </div>
+            <!-- Ajoutez d'autres médecins ici -->
+        </div>
+    </section>
+
+    <!-- Formulaire de Rendez-vous -->
+    <div id="appointment-form" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAppointmentForm()">&times;</span>
+            <h2>Prendre Rendez-vous</h2>
+            <form>
+                <label for="doctor-name">Médecin :</label>
+                <input type="text" id="doctor-name" readonly>
+
+                <label for="patient-name">Votre Nom :</label>
+                <input type="text" id="patient-name" required>
+
+                <label for="patient-email">Votre Email :</label>
+                <input type="email" id="patient-email" required>
+
+                <label for="appointment-date">Date du Rendez-vous :</label>
+                <input type="date" id="appointment-date" required>
+
+                <button type="submit">Confirmer Rendez-vous</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+  <footer>
+    <p>Suivez-nous sur :</p>
+    <div class="social-icons">
+      <a href="#"><img src="assets/images/.png" alt="Facebook"></a>
+      <a href="#"><img src="assets/images/.jpg" alt="Twitter"></a>
+      <a href="#"><img src="assets/images/.jpg" alt="Instagram"></a>
+    </div>
+    <p>Contactez-nous : infotunisie-ecovision.tn</p>
+  </footer>
+
+
+    <script>
+        function openAppointmentForm(doctorName) {
+            document.getElementById('doctor-name').value = doctorName;
+            document.getElementById('appointment-form').style.display = 'block';
+        }
+
+        function closeAppointmentForm() {
+            document.getElementById('appointment-form').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

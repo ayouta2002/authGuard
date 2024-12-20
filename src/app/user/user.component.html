@@ -1,0 +1,70 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSave()" class="form-container">
+  <div class="form-group">
+    <label for="firstName">First Name: <span class="required">*</span></label>
+    <input id="firstName" formControlName="firstName" class="form-control">
+    <div *ngIf="profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched" class="error">
+      First Name is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name: <span class="required">*</span></label>
+    <input id="lastName" formControlName="lastName" class="form-control">
+    <div *ngIf="profileForm.get('lastName')?.invalid && profileForm.get('lastName')?.touched" class="error">
+      Last Name is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email: <span class="required">*</span></label>
+    <input id="email" formControlName="email" type="email" class="form-control">
+    <div *ngIf="profileForm.get('email')?.invalid && profileForm.get('email')?.touched" class="error">
+      Valid Email is required.
+    </div>
+  </div>
+
+  <div formGroupName="address" class="form-group">
+    <h3>Address</h3>
+
+    <div class="form-group">
+      <label for="streetNumber">Street Number: <span class="required">*</span></label>
+      <input id="streetNumber" formControlName="streetNumber" class="form-control">
+      <div *ngIf="profileForm.get('address.streetNumber')?.invalid && profileForm.get('address.streetNumber')?.touched" class="error">
+        Street Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City: <span class="required">*</span></label>
+      <input id="city" formControlName="city" class="form-control">
+      <div *ngIf="profileForm.get('address.city')?.invalid && profileForm.get('address.city')?.touched" class="error">
+        City is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="postalCode">Postal Code: <span class="required">*</span></label>
+      <input id="postalCode" formControlName="postalCode" class="form-control">
+      <div *ngIf="profileForm.get('address.postalCode')?.invalid && profileForm.get('address.postalCode')?.touched" class="error">
+        Valid Postal Code is required.
+      </div>
+    </div>
+  </div>
+
+  <div formArrayName="skills" class="form-group">
+    <h3>Skills</h3>
+    <div *ngFor="let skill of skills.controls; let i = index" class="skill-input">
+      <input [formControlName]="i" class="form-control">
+      <button type="button" (click)="removeSkill(i)" *ngIf="skills.controls.length > 1" class="remove-skill-button">Remove</button>
+      <div *ngIf="skill.invalid && skill.touched" class="error">
+        Skill is required.
+      </div>
+    </div>
+    <button type="button" (click)="addSkill()" class="add-skill-button">+ Add Skill</button>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" [disabled]="profileForm.invalid" class="save-button">Save</button>
+    <button type="button" (click)="onReset()" class="reset-button">Reset</button>
+  </div>
+</form>

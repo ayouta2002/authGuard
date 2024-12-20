@@ -1,0 +1,50 @@
+<form #addform="ngForm" (ngSubmit)="showForm(addform)">
+    <div class="form-group">
+      <label for="fname">Title:</label><br>
+      <input type="text" class="form-control" name="id" ngModel hidden #id="ngModel"><br>
+      <input type="text" class="form-control" name="title" ngModel #title="ngModel"required minlength="4"><br>
+    <small class="text-danger" *ngIf="title.errors?.['required'] && title.touched">Required field</small>
+    <small class="text-danger" *ngIf="title.errors?.['minlength'] && title.touched">At least 4 characters</small>
+
+    </div>
+  
+    <div class="form-group">
+      <label for="fname">Image:</label><br>
+      <input type="file" class="form-control" name="image" ngModel #image="ngModel"><br>
+    </div>
+  
+    <div class="form-group">
+      <label for="fname">Description:</label><br>
+      <textarea rows="3" cols="4" class="form-control" name="description" ngModel #desc="ngModel"></textarea><br>
+    </div>
+  
+    <input type="checkbox" name="available" ngModel #available="ngModel"> Available<br>
+    <input type="checkbox" name="available" ngModel #available="ngModel"> Not Available<br>
+<button class="btn btn-primary">Save</button>
+  </form>
+
+<!--  -->
+  <div *ngIf="newCateg">
+<form #addForm="ngForm" (ngSubmit)="updateCateg(addForm)">
+  <div class="form-group">
+    <label for="">Title</label>
+    <input type="text" class="form-control" name="id" [(ngModel)]="newCateg.id" #id="ngModel" >
+    <input type="text" class="form-control" name="title" [(ngModel)]="newCateg.title" #title="ngModel"  placeholder="Titre" required minlength="4">
+    <small class="text-danger" *ngIf="title.errors?.['required'] && title.touched" >Reuired Fieled</small>
+    <small class="text-danger" *ngIf="title.errors?.['minlength'] && title.touched" >minmum 4 caractères</small>
+  </div>
+  <div class="form-group">
+      <label for="">Image</label>
+      <input type="file" class="form-control" name="image" [(ngModel)]="newCateg.image" #image="ngModel"  placeholder="Image">
+  </div>
+  <div class="form-check">
+      <label for="">Description</label>
+      <input type="text" class="form-control" name="description" [(ngModel)]="newCateg.description" #description="ngModel"  placeholder="Description" required>
+      <small class="text-danger" *ngIf="description.errors?.['required']">Required Fieled</small>
+  </div>
+  <input type="text" class="form-control" name="available" [(ngModel)]="newCateg.available" #available="ngModel" > 
+  
+      <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+</div>
+  

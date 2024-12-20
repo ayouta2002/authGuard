@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "email": "salma.alayeb@gmail.com",
+      "accessToken": "$2a$10$ofbWbgTIEZT3qB6RZeT8I.F5fnlcPjXnsxVLGE1s1bv9ZwqWwbM.m",
+      "role": "user",
+      "name": "alayeb",
+      "surname": "salma",
+      "id": 4
+    },
+    {
+      "email": "eya.benslimen@esprit.tn",
+      "password": "$2a$10$JiKYSUOFS7fE83pKoVPz5e.PqMTscfU14O2He0NYtHzq7vJc6BvTi",
+      "role": "ROLE_ADMIN",
+      "name": "ben slimen",
+      "surname": "eya",
+      "id": 5
+    },
+    {
+      "email": "mouadh@gmail.com",
+      "password": "$2a$10$UoBCcRRT5K9dlPoQhnorjOS2yrRAv1ZKyeGhB0mMhJ2lYTQs8uiuq",
+      "role": "ROLE_ADMIN",
+      "name": "moiuadh",
+      "surname": "mouadh",
+      "id": 6
+    },
+    {
+      "email": "malika@gmail.com",
+      "password": "$2a$10$VOg1jSuQSHh/sDZ9yvTJcOEzMRIHUHEVxh.91CSYzEg45cV5C38ZC",
+      "role": "user",
+      "name": "maila",
+      "surname": "malika",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avis</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">TuniVert</div>
+        <nav>
+            <ul>
+                <li><a href="#about">Qui sommes-nous ?</a></li>
+                <li><a href="#program">Programme</a></li>
+                <li><a href="#team">Équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#avis">Avis</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta">Rejoignez-nous</a>
+    </header>
+
+    <!-- Section Avis -->
+    <section id="avis" class="avis">
+        <h2>Donnez votre avis</h2>
+        <div class="avis-container">
+            <div class="avis-content">
+                <!-- Formulaire d'avis -->
+                <form>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" required>
+
+                    <label for="rating">Évaluation :</label>
+                    <div class="stars">
+                        <input type="radio" id="star1" name="rating" value="5">
+                        <label for="star1" class="star">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="4">
+                        <label for="star2" class="star">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" class="star">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="2">
+                        <label for="star4" class="star">&#9733;</label>
+                        <input type="radio" id="star5" name="rating" value="1">
+                        <label for="star5" class="star">&#9733;</label>
+                    </div>
+
+                    <label for="comment">Commentaire :</label>
+                    <textarea id="comment" rows="4" required></textarea>
+
+                    <button type="submit">Soumettre</button>
+                </form>
+            </div>
+
+            <!-- Liste des avis -->
+            <div class="avis-list">
+                <h3>Avis récents :</h3>
+                <div class="avis-item">
+                    <h4>Mohammed Manaii</h4>
+                    <div class="stars">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- Exemple d'évaluation -->
+                    </div>
+                    <p>J'apprécie énormément les initiatives du parti pour un avenir durable. Les actions menées sont inspirantes !</p>
+                </div>
+                <div class="avis-item">
+                    <h4>Ahmed Ben ali</h4>
+                    <div class="stars">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- Exemple d'évaluation -->
+                    </div>
+                    <p>J'apprécie énormément les initiatives du parti pour un avenir durable. Les actions menées sont inspirantes !</p>
+                </div>
+                <!-- Ajoutez d'autres avis ici -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Suivez-nous sur :</p>
+        <div class="social-icons">
+            <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="assets/images/instagram.png" alt="Instagram"></a>
+        </div>
+        <p>Contactez-nous : infotunisie-ecovision.tn</p>
+    </footer>
+</body>
+</html>

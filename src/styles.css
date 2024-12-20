@@ -1,0 +1,440 @@
+.highlight {
+    background-color: yellow;
+    padding: 10px;
+    border: 1px solid black;
+    }
+    .main_container {
+        height: 100vh;
+        color: #fff;
+        background: url('https://img.freepik.com/photos-gratuite/composition-abstraite-lumiere-ultraviolette-uv_23-2149243965.jpg?ga=GA1.1.2059791731.1728169871&semt=ais_hybrid') no-repeat ;
+        background-size: cover; /* Adjust background size */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .content {
+        text-align: center;
+      }
+      .h2{
+        margin:8px;
+      }
+      button {
+        height: 55px;
+        width: 170px;
+        border-radius: 20px;
+        border: 2px solid white;
+        font-size: 20px;
+        font-weight: 500;
+        margin:8px;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+      * {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+      
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      
+      #notfound {
+        position: relative;
+        height: 100vh;
+        background: #030005;
+      }
+      
+      #notfound .notfound {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+      }
+      
+      .notfound {
+        max-width: 767px;
+        width: 100%;
+        line-height: 1.4;
+        text-align: center;
+      }
+      
+      .notfound .notfound-404 {
+        position: relative;
+        height: 180px;
+        margin-bottom: 20px;
+        z-index: -1;
+      }
+      
+      .notfound .notfound-404 h1 {
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50% , -50%);
+            -ms-transform: translate(-50% , -50%);
+                transform: translate(-50% , -50%);
+        font-size: 224px;
+        font-weight: 900;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: -12px;
+        color: #030005;
+        text-transform: uppercase;
+        text-shadow: -1px -1px 0px #8400ff, 1px 1px 0px #ff005a;
+        letter-spacing: -20px;
+      }
+      
+      
+      .notfound .notfound-404 h2 {
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 110px;
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 0px 2px 0px red;
+        letter-spacing: 13px;
+        margin: 0;
+      }
+      
+      .notfound a {
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #ff005a;
+        text-decoration: none;
+        border: 2px solid;
+        background: transparent;
+        padding: 10px 40px;
+        font-size: 14px;
+        font-weight: 700;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+      }
+      
+      .notfound a:hover {
+        color: #8400ff;
+      }
+      
+      @media only screen and (max-width: 767px) {
+          .notfound .notfound-404 h2 {
+              font-size: 24px;
+          }
+      }
+      
+      @media only screen and (max-width: 480px) {
+        .notfound .notfound-404 h1 {
+            font-size: 182px;
+        }
+      }
+     
+
+
+      /***/
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6; /* Amélioration de la lisibilité */
+      }
+      
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #2E8B57;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour plus de profondeur */
+      }
+      
+      header .logo {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 2px; /* Ajout d'espace entre les lettres pour un effet moderne */
+      }
+      
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      
+      nav ul li {
+        margin: 0 20px;
+      }
+      
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease-in-out;
+      }
+      
+      nav ul li a:hover {
+        color: #FFD700;
+      }
+      
+      .cta {
+        background-color: #FFD700;
+        padding: 12px 25px;
+        color: #2E8B97;
+        text-decoration: none;
+        border-radius: 50px; /* Boutons plus arrondis */
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      
+      .cta:hover {
+        background-color: #2E8B57;
+        color: #FFD700;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre pour effet de clic */
+      }
+      
+      /* Section Héros */
+      .hero {
+        background-image: url('assets/images/home.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Ajout d'un overlay sombre */
+        z-index: -1;
+      }
+      
+      .hero h1 {
+        font-size: 54px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée pour le texte */
+      }
+      
+      .hero p {
+        font-size: 22px;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+      
+      /* Section à propos */
+      .about {
+        padding: 60px 30px;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+      
+      .about h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #2E8B57;
+        text-transform: uppercase;
+      }
+      
+      .about p {
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+        color: #555;
+      }
+      
+      .icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      
+      .icon {
+        margin: 0 30px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out; /* Animation au survol */
+      }
+      
+      .icon img {
+        max-width: 120px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour des icônes */
+      }
+      
+      .icon:hover {
+        transform: scale(1.1); /* Légère animation d'agrandissement au survol */
+      }
+      
+      .icon p {
+        font-size: 16px;
+        margin-top: 10px;
+        color: #2E8B57;
+        font-weight: bold;
+      }
+      
+      /* Pied de page */
+      footer {
+        background-color: #2E8B57;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère en haut du pied de page */
+      }
+      
+      .social-icons a {
+        margin: 0 10px;
+        color: white;
+        transition: color 0.3s ease-in-out;
+        font-size: 24px;
+      }
+      
+      .social-icons a:hover {
+        color: #FFD700;
+      }
+      /**logo*/
+      
+
+      .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px; /* Ajuste la taille du logo */
+  height: auto;
+  margin-right: 10px; /* Espace entre l'image et le texte */
+}
+/* .required {
+  color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+} */
+
+/* Container pour le formulaire */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Groupe de chaque champ */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label des champs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Champ de saisie */
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Astérisque rouge */
+.required {
+  color: red;
+}
+
+/* Messages d'erreur */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Actions des boutons (Save / Reset) */
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-button, .reset-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Bouton pour ajouter ou supprimer une compétence */
+.add-skill-button, .remove-skill-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 1em;
+  border: none;
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-skill-button {
+  margin-top: 20px;
+}
+
+.remove-skill-button {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+.skill-input {
+  display: flex;
+  align-items: center;
+}
+
+
